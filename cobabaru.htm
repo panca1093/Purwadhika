@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Data Coba</title>
+    <script defer src="cobabaru.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 20px
+        }
+        fieldset{
+            width: 50%
+        }
+    </style>
+</head>
+<body>
+<center>
+    <form id="">
+        <fieldset>
+            <legend>Form Input Data</legend>
+            <p>
+            Nama: <input type="text" name="nama" id="nama">
+            Tanggal Lahir: <input type="date" name="tgl" id="tgl">
+            Kota: <input type="text" name="kota" id="city">
+            </p>
+            <input type="button" onclick="fnInput()" value="Input">
+            <p id="ubah" style="display: none">
+                Nama: <input type="text" name="nama" id="nama">
+                Tanggal Lahir: <input type="date" name="tgl" id="tgl">
+                Kota: <input type="text" name="kota" id="city">
+                <input type="button" onclick="fnUbah()" value="OK !">
+            </p>
+        </fieldset>
+    </form>
+    <p>
+    <button onclick="fnSortNamaA()">Sort Nama Ass</button>
+    <button onclick="fnSortNamaD()">Sort Nama Dec</button>
+    <button onclick="fnSortUmurA()">Sort Umur Ass</button>
+    <button onclick="fnSortUmurD()">Sort Umur Dec</button>
+    <button onclick="fnSortKotaA()">Sort Kota Ass</button>
+    <button onclick="fnSortKotaD()">Sort Kota Dec</button>
+    </p>
+    <table id="myTable" style="display : none">
+        <thead id="head"></thead>
+        <th>Nama</th>
+        <th colspan="3">Tgl Lahir</th>
+        <th>Zodiak</th>
+        <th>Usia</th>
+        <th>Pensiun</th>
+        <th>Kota</th>
+        <th colspan="2">Action</th>
+        <tbody id="body"></tbody>
+    </table>
+</center>
+</body>
+</html>
